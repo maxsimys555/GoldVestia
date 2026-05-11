@@ -1,0 +1,26 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#080808"/>
+  <rect width="1200" height="760" fill="url(#grid)" opacity="0.3"/>
+  <circle cx="930" cy="190" r="300" fill="#F3C96F" opacity="0.12"/>
+  <circle cx="280" cy="620" r="360" fill="#FFFFFF" opacity="0.06"/>
+  <g filter="url(#shadow)">
+    <rect x="312" y="170" width="576" height="420" rx="44" fill="#111315" stroke="white" stroke-opacity="0.12" stroke-width="2"/>
+    <rect x="366" y="224" width="468" height="312" rx="34" fill="#050505" stroke="#F3C96F" stroke-opacity="0.18"/>
+    <circle cx="600" cy="380" r="96" fill="url(#dial)" stroke="white" stroke-opacity="0.2" stroke-width="3"/>
+    <circle cx="600" cy="380" r="42" fill="#090909" stroke="#F3C96F" stroke-opacity="0.38" stroke-width="3"/>
+    <path d="M600 284V332M600 428V476M504 380H552M648 380H696M532 312L566 346M668 448L634 414M668 312L634 346M532 448L566 414" stroke="#F3C96F" stroke-opacity="0.5" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <defs>
+    <pattern id="grid" width="74" height="74" patternUnits="userSpaceOnUse">
+      <path d="M74 0H0V74" stroke="white" stroke-opacity="0.08"/>
+    </pattern>
+    <linearGradient id="dial" x1="524" y1="298" x2="684" y2="456" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2D3032"/>
+      <stop offset="0.5" stop-color="#111315"/>
+      <stop offset="1" stop-color="#D5A94F"/>
+    </linearGradient>
+    <filter id="shadow" x="242" y="100" width="716" height="560" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="36" stdDeviation="38" flood-color="#000000" flood-opacity="0.58"/>
+    </filter>
+  </defs>
+</svg>

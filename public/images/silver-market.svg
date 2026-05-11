@@ -1,0 +1,28 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#070808"/>
+  <rect width="1200" height="760" fill="url(#grid)" opacity="0.28"/>
+  <circle cx="230" cy="180" r="320" fill="#DDE5EF" opacity="0.14"/>
+  <circle cx="980" cy="540" r="300" fill="#F6F8FB" opacity="0.1"/>
+  <g filter="url(#shadow)">
+    <ellipse cx="600" cy="396" rx="318" ry="126" fill="#2A2F35"/>
+    <ellipse cx="600" cy="360" rx="318" ry="126" fill="url(#coin)"/>
+    <ellipse cx="600" cy="360" rx="222" ry="76" stroke="white" stroke-opacity="0.34" stroke-width="3"/>
+    <path d="M425 360C478 312 725 306 780 360C724 414 481 411 425 360Z" fill="white" opacity="0.14"/>
+  </g>
+  <path d="M224 590H976" stroke="#E8EEF8" stroke-opacity="0.18"/>
+  <path d="M308 626H892" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <defs>
+    <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" stroke="white" stroke-opacity="0.08"/>
+    </pattern>
+    <linearGradient id="coin" x1="316" y1="262" x2="870" y2="438" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.34" stop-color="#B9C2CE"/>
+      <stop offset="0.7" stop-color="#EEF3F8"/>
+      <stop offset="1" stop-color="#6E7883"/>
+    </linearGradient>
+    <filter id="shadow" x="222" y="190" width="756" height="386" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="32" stdDeviation="34" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+</svg>

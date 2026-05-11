@@ -1,0 +1,34 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#080808"/>
+  <rect width="1200" height="760" fill="url(#grid)" opacity="0.34"/>
+  <circle cx="260" cy="160" r="300" fill="#D8A84F" opacity="0.18"/>
+  <circle cx="1040" cy="620" r="360" fill="#FFE2A4" opacity="0.12"/>
+  <g filter="url(#shadow)">
+    <path d="M264 486L352 358H812L924 486H264Z" fill="url(#bar1)"/>
+    <path d="M352 358H812L770 300H392L352 358Z" fill="#F8D98B"/>
+    <path d="M264 486H924L856 548H304L264 486Z" fill="#8F6424"/>
+    <path d="M402 346L474 244H760L846 346H402Z" fill="url(#bar2)"/>
+    <path d="M474 244H760L728 202H506L474 244Z" fill="#FFE6A7"/>
+    <path d="M402 346H846L796 394H432L402 346Z" fill="#9B6A22"/>
+  </g>
+  <path d="M170 590H1040" stroke="#F3C96F" stroke-opacity="0.22"/>
+  <path d="M238 626H968" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <defs>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" stroke="white" stroke-opacity="0.08"/>
+    </pattern>
+    <linearGradient id="bar1" x1="294" y1="354" x2="888" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF2B8"/>
+      <stop offset="0.42" stop-color="#D9A441"/>
+      <stop offset="1" stop-color="#6A4217"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="428" y1="236" x2="804" y2="372" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF6C8"/>
+      <stop offset="0.48" stop-color="#E7B850"/>
+      <stop offset="1" stop-color="#76501F"/>
+    </linearGradient>
+    <filter id="shadow" x="184" y="122" width="820" height="506" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="34" stdDeviation="34" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+</svg>
