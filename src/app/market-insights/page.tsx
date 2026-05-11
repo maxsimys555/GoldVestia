@@ -20,17 +20,20 @@ export default function MarketInsightsPage() {
               />
               <div className="mt-10 space-y-6 text-slate-300 sm:text-lg">
                 <p>
-                  Our insights page brings together curated research, private market signals, and premium commentary for metal-focused portfolios.
+                  Our insights page brings together curated research, private market signals, and
+                  premium commentary for metal-focused portfolios.
                 </p>
                 <p>
-                  Explore the rhythm of gold, silver, platinum, and palladium markets through a lens built for wealth preservation and strategic allocation.
+                  Explore the rhythm of gold, silver, platinum, and palladium markets through a lens
+                  built for wealth preservation and strategic allocation.
                 </p>
               </div>
             </div>
             <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/30 backdrop-blur-3xl">
               <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">Insight view</p>
               <p className="mt-6 text-lg leading-8 text-slate-300">
-                Private metals intelligence designed to clarify allocation decisions, monitor liquidity, and preserve premium capital.
+                Private metals intelligence designed to clarify allocation decisions, monitor
+                liquidity, and preserve premium capital.
               </p>
             </div>
           </div>

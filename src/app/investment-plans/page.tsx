@@ -21,17 +21,25 @@ export default function InvestmentPlansPage() {
               />
               <div className="mt-10 space-y-6 text-slate-300 sm:text-lg">
                 <p>
-                  Each plan is designed to keep precious metal investment simple, secure, and aligned with your long-term intent.
+                  Each plan is designed to keep precious metal investment simple, secure, and
+                  aligned with your long-term intent.
                 </p>
                 <p>
-                  We partner with private vault providers and wealth teams to deliver a luxury experience with disciplined execution.
+                  We partner with private vault providers and wealth teams to deliver a luxury
+                  experience with disciplined execution.
                 </p>
               </div>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-                <Button className="rounded-full bg-amber-200 text-slate-950 shadow-[0_24px_60px_-40px_rgba(255,203,80,0.8)] transition hover:-translate-y-0.5 hover:bg-amber-300" size="lg">
+                <Button
+                  className="rounded-full bg-amber-200 text-slate-950 shadow-[0_24px_60px_-40px_rgba(255,203,80,0.8)] transition hover:-translate-y-0.5 hover:bg-amber-300"
+                  size="lg"
+                >
                   Explore the plans
                 </Button>
-                <Link href="/contact" className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-white/25 hover:bg-white/5">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-white/25 hover:bg-white/5"
+                >
                   Arrange a strategy call
                 </Link>
               </div>
@@ -40,7 +48,8 @@ export default function InvestmentPlansPage() {
             <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/30 backdrop-blur-3xl">
               <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">Plan design</p>
               <p className="mt-6 text-base leading-8 text-slate-300">
-                Our investment plans are tailored to support your precious metals allocation strategy with institutional-grade custody and professional oversight.
+                Our investment plans are tailored to support your precious metals allocation
+                strategy with institutional-grade custody and professional oversight.
               </p>
             </div>
           </div>

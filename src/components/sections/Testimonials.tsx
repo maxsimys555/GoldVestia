@@ -48,10 +48,15 @@ export async function Testimonials() {
               key={item.id}
               className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-[0_40px_120px_-80px_rgba(0,0,0,0.6)] transition duration-300 hover:-translate-y-1 hover:border-amber-200/25 hover:bg-white/[0.07]"
             >
-              <div className="mb-6 flex gap-1 text-amber-200" aria-label={`${item.rating ?? 5} out of 5 rating`}>
-                {Array.from({ length: Math.max(1, Math.min(5, item.rating ?? 5)) }).map((_, index) => (
-                  <Star key={index} className="h-4 w-4 fill-current" />
-                ))}
+              <div
+                className="mb-6 flex gap-1 text-amber-200"
+                aria-label={`${item.rating ?? 5} out of 5 rating`}
+              >
+                {Array.from({ length: Math.max(1, Math.min(5, item.rating ?? 5)) }).map(
+                  (_, index) => (
+                    <Star key={index} className="h-4 w-4 fill-current" />
+                  ),
+                )}
               </div>
               <p className="text-lg leading-8 text-slate-100">&ldquo;{item.quote}&rdquo;</p>
               <footer className="mt-8 border-t border-white/10 pt-5 text-sm text-slate-400">

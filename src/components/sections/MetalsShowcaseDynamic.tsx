@@ -76,7 +76,11 @@ export function MetalsShowcase() {
                 </div>
               </div>
               <p className="mt-6 text-lg font-semibold text-white">
-                ${metal.price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                $
+                {metal.price.toLocaleString('en-US', {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
               </p>
               <p className="mt-2 text-sm text-slate-400">{metal.currency}</p>
             </article>

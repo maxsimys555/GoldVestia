@@ -8,14 +8,22 @@ const fallbackPlans = [
     name: 'Core Bullion',
     price: 'From $10,000',
     highlight: 'A disciplined entry point for physical gold and silver allocation.',
-    features: ['Gold and silver allocation', 'Quarterly portfolio review', 'Private vault introduction'],
+    features: [
+      'Gold and silver allocation',
+      'Quarterly portfolio review',
+      'Private vault introduction',
+    ],
   },
   {
     id: 'strategic-metals',
     name: 'Strategic Metals',
     price: 'From $50,000',
     highlight: 'A diversified plan across gold, silver, platinum, and palladium.',
-    features: ['Multi-metal strategy', 'Dedicated allocation specialist', 'Priority settlement support'],
+    features: [
+      'Multi-metal strategy',
+      'Dedicated allocation specialist',
+      'Priority settlement support',
+    ],
   },
   {
     id: 'private-reserve',

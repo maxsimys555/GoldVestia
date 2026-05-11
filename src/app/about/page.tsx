@@ -18,11 +18,13 @@ export default function AboutPage() {
           />
           <div className="mt-10 space-y-6 max-w-3xl text-slate-300 sm:text-lg">
             <p>
-              Our platform is built for asset owners who value the enduring strength of gold, silver, platinum, and palladium.
-              Every experience is designed to feel modern, quiet, and deeply reliable.
+              Our platform is built for asset owners who value the enduring strength of gold,
+              silver, platinum, and palladium. Every experience is designed to feel modern, quiet,
+              and deeply reliable.
             </p>
             <p>
-              We partner with trusted vault custodians, provide premium market guidance, and preserve the refined nature of precious metal wealth.
+              We partner with trusted vault custodians, provide premium market guidance, and
+              preserve the refined nature of precious metal wealth.
             </p>
           </div>
         </Reveal>
@@ -37,9 +39,14 @@ export default function AboutPage() {
           />
           <div className="mt-12 grid gap-6 lg:grid-cols-4">
             {trustStats.map((stat) => (
-              <article key={stat.label} className="rounded-[2rem] border border-white/10 bg-zinc-950/80 p-7 shadow-[0_40px_90px_-70px_rgba(0,0,0,0.8)]">
+              <article
+                key={stat.label}
+                className="rounded-[2rem] border border-white/10 bg-zinc-950/80 p-7 shadow-[0_40px_90px_-70px_rgba(0,0,0,0.8)]"
+              >
                 <p className="text-4xl font-semibold text-white">{stat.value}</p>
-                <p className="mt-4 text-sm uppercase tracking-[0.35em] text-slate-400">{stat.label}</p>
+                <p className="mt-4 text-sm uppercase tracking-[0.35em] text-slate-400">
+                  {stat.label}
+                </p>
               </article>
             ))}
           </div>

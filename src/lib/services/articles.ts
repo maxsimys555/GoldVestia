@@ -58,7 +58,9 @@ export async function fetchArticles(): Promise<Article[]> {
   try {
     const { data, error } = await supabase
       .from('articles')
-      .select('id, title, slug, description, content, category, image_url, source, date, created_at')
+      .select(
+        'id, title, slug, description, content, category, image_url, source, date, created_at',
+      )
       .order('date', { ascending: false });
 
     if (error) {
@@ -86,7 +88,9 @@ export async function fetchArticlesByCategory(category: string): Promise<Article
   try {
     const { data, error } = await supabase
       .from('articles')
-      .select('id, title, slug, description, content, category, image_url, source, date, created_at')
+      .select(
+        'id, title, slug, description, content, category, image_url, source, date, created_at',
+      )
       .eq('category', category)
       .order('date', { ascending: false });
 
@@ -117,7 +121,9 @@ export async function fetchArticleBySlug(slug: string): Promise<Article | null> 
   try {
     const { data, error } = await supabase
       .from('articles')
-      .select('id, title, slug, description, content, category, image_url, source, date, created_at')
+      .select(
+        'id, title, slug, description, content, category, image_url, source, date, created_at',
+      )
       .eq('slug', slug)
       .single();
 

@@ -8,15 +8,18 @@ export const unstable_instant = { prefetch: 'static' };
 const silverPoints = [
   {
     title: 'Industrial strength',
-    description: 'Silver offers dynamic demand from technology, energy, and premium reserve allocations.',
+    description:
+      'Silver offers dynamic demand from technology, energy, and premium reserve allocations.',
   },
   {
     title: 'Balanced growth',
-    description: 'A smart complement to gold that can enhance portfolio diversification with liquidity.',
+    description:
+      'A smart complement to gold that can enhance portfolio diversification with liquidity.',
   },
   {
     title: 'Elegant precision',
-    description: 'Access refined silver positions with streamlined custody and audit-ready transparency.',
+    description:
+      'Access refined silver positions with streamlined custody and audit-ready transparency.',
   },
 ];
 
@@ -44,10 +47,16 @@ export default function SilverPage() {
                 </p>
               </div>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-                <Button className="rounded-full bg-amber-200 text-slate-950 shadow-[0_24px_60px_-40px_rgba(255,203,80,0.8)] transition hover:-translate-y-0.5 hover:bg-amber-300" size="lg">
+                <Button
+                  className="rounded-full bg-amber-200 text-slate-950 shadow-[0_24px_60px_-40px_rgba(255,203,80,0.8)] transition hover:-translate-y-0.5 hover:bg-amber-300"
+                  size="lg"
+                >
                   View silver strategies
                 </Button>
-                <Link href="/investment-plans" className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-white/25 hover:bg-white/5">
+                <Link
+                  href="/investment-plans"
+                  className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-white/25 hover:bg-white/5"
+                >
                   See investment plans
                 </Link>
               </div>
@@ -90,8 +99,13 @@ export default function SilverPage() {
                 copy: 'Private vaulting built for audit-ready reporting and discreet asset control.',
               },
             ].map((item) => (
-              <article key={item.label} className="rounded-[2rem] border border-white/10 bg-zinc-950/80 p-7 shadow-[0_40px_90px_-70px_rgba(0,0,0,0.8)] transition hover:-translate-y-1 hover:border-amber-200/20 hover:bg-white/5">
-                <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">{item.label}</p>
+              <article
+                key={item.label}
+                className="rounded-[2rem] border border-white/10 bg-zinc-950/80 p-7 shadow-[0_40px_90px_-70px_rgba(0,0,0,0.8)] transition hover:-translate-y-1 hover:border-amber-200/20 hover:bg-white/5"
+              >
+                <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">
+                  {item.label}
+                </p>
                 <p className="mt-5 text-lg leading-8 text-slate-300">{item.copy}</p>
               </article>
             ))}

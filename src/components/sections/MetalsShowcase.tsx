@@ -92,7 +92,8 @@ export async function MetalsShowcase() {
                 </div>
               </div>
               <p className="mt-6 text-lg font-semibold text-white">
-                ${metal.price.toLocaleString('en-US', {
+                $
+                {metal.price.toLocaleString('en-US', {
                   minimumFractionDigits: 2,
                   maximumFractionDigits: 2,
                 })}

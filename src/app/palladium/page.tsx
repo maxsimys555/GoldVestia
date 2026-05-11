@@ -12,7 +12,8 @@ const palladiumAdvantages = [
   },
   {
     title: 'Demand resilience',
-    description: 'Strong industrial demand supports long-term structural value for rare metal exposure.',
+    description:
+      'Strong industrial demand supports long-term structural value for rare metal exposure.',
   },
   {
     title: 'Strategic balance',
@@ -35,24 +36,34 @@ export default function PalladiumPage() {
               />
               <div className="mt-10 space-y-6 text-slate-300 sm:text-lg">
                 <p>
-                  Palladium is a highly selective allocation that enhances premium portfolios. Our service provides refined access to this rare metal with trusted custody.
+                  Palladium is a highly selective allocation that enhances premium portfolios. Our
+                  service provides refined access to this rare metal with trusted custody.
                 </p>
                 <p>
-                  For investors seeking portfolio distinction, palladium delivers an elevated dimension of precious metal exposure.
+                  For investors seeking portfolio distinction, palladium delivers an elevated
+                  dimension of precious metal exposure.
                 </p>
               </div>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-                <Button className="rounded-full bg-amber-200 text-slate-950 shadow-[0_24px_60px_-40px_rgba(255,203,80,0.8)] transition hover:-translate-y-0.5 hover:bg-amber-300" size="lg">
+                <Button
+                  className="rounded-full bg-amber-200 text-slate-950 shadow-[0_24px_60px_-40px_rgba(255,203,80,0.8)] transition hover:-translate-y-0.5 hover:bg-amber-300"
+                  size="lg"
+                >
                   Explore palladium access
                 </Button>
-                <Link href="/market-insights" className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-white/25 hover:bg-white/5">
+                <Link
+                  href="/market-insights"
+                  className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-white/25 hover:bg-white/5"
+                >
                   Review market insight
                 </Link>
               </div>
             </div>
 
             <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-black/30 backdrop-blur-3xl">
-              <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">Palladium profile</p>
+              <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">
+                Palladium profile
+              </p>
               <div className="mt-6 grid gap-4">
                 {palladiumAdvantages.map((item) => (
                   <div key={item.title} className="rounded-3xl bg-black/50 p-5">
@@ -88,8 +99,13 @@ export default function PalladiumPage() {
                 copy: 'Rare metal exposure with a modern premium investment thesis.',
               },
             ].map((item) => (
-              <article key={item.label} className="rounded-[2rem] border border-white/10 bg-zinc-950/80 p-7 shadow-[0_40px_90px_-70px_rgba(0,0,0,0.8)] transition hover:-translate-y-1 hover:border-amber-200/20 hover:bg-white/5">
-                <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">{item.label}</p>
+              <article
+                key={item.label}
+                className="rounded-[2rem] border border-white/10 bg-zinc-950/80 p-7 shadow-[0_40px_90px_-70px_rgba(0,0,0,0.8)] transition hover:-translate-y-1 hover:border-amber-200/20 hover:bg-white/5"
+              >
+                <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">
+                  {item.label}
+                </p>
                 <p className="mt-5 text-lg leading-8 text-slate-300">{item.copy}</p>
               </article>
             ))}

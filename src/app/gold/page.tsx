@@ -8,15 +8,18 @@ export const unstable_instant = { prefetch: 'static' };
 const goldDetails = [
   {
     title: 'Anchor protection',
-    description: 'Gold remains the preferred store of value for families and institutions navigating market uncertainty.',
+    description:
+      'Gold remains the preferred store of value for families and institutions navigating market uncertainty.',
   },
   {
     title: 'Refined liquidity',
-    description: 'Premium bullion access with private vault settlement and trusted delivery options.',
+    description:
+      'Premium bullion access with private vault settlement and trusted delivery options.',
   },
   {
     title: 'Portfolio balance',
-    description: 'gold offers strategic downside resilience while preserving capital across business cycles.',
+    description:
+      'gold offers strategic downside resilience while preserving capital across business cycles.',
   },
 ];
 
@@ -35,9 +38,9 @@ export default function GoldPage() {
               />
               <div className="mt-10 space-y-6 text-slate-300 sm:text-lg">
                 <p>
-                  Gold is the timeless foundation for private wealth preservation. Our refined platform
-                  helps investors secure premium metal positions with institutional-grade delivery,
-                  storage, and portfolio oversight.
+                  Gold is the timeless foundation for private wealth preservation. Our refined
+                  platform helps investors secure premium metal positions with institutional-grade
+                  delivery, storage, and portfolio oversight.
                 </p>
                 <p>
                   Designed for discerning investors, this experience blends clarity, discretion, and
@@ -45,10 +48,16 @@ export default function GoldPage() {
                 </p>
               </div>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-                <Button className="rounded-full bg-amber-200 text-slate-950 shadow-[0_24px_60px_-40px_rgba(255,203,80,0.8)] transition hover:-translate-y-0.5 hover:bg-amber-300" size="lg">
+                <Button
+                  className="rounded-full bg-amber-200 text-slate-950 shadow-[0_24px_60px_-40px_rgba(255,203,80,0.8)] transition hover:-translate-y-0.5 hover:bg-amber-300"
+                  size="lg"
+                >
                   Explore gold allocation
                 </Button>
-                <Link href="/contact" className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-white/25 hover:bg-white/5">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-white/25 hover:bg-white/5"
+                >
                   Book a private consultation
                 </Link>
               </div>
@@ -91,8 +100,13 @@ export default function GoldPage() {
                 copy: 'Structures that support family offices and multi-generational wealth preservation.',
               },
             ].map((item) => (
-              <article key={item.label} className="rounded-[2rem] border border-white/10 bg-zinc-950/80 p-7 shadow-[0_40px_90px_-70px_rgba(0,0,0,0.8)] transition hover:-translate-y-1 hover:border-amber-200/20 hover:bg-white/5">
-                <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">{item.label}</p>
+              <article
+                key={item.label}
+                className="rounded-[2rem] border border-white/10 bg-zinc-950/80 p-7 shadow-[0_40px_90px_-70px_rgba(0,0,0,0.8)] transition hover:-translate-y-1 hover:border-amber-200/20 hover:bg-white/5"
+              >
+                <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">
+                  {item.label}
+                </p>
                 <p className="mt-5 text-lg leading-8 text-slate-300">{item.copy}</p>
               </article>
             ))}

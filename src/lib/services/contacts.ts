@@ -1,6 +1,8 @@
 import { isSupabaseConfigured, supabase, type Contact } from '../supabase';
 
-export async function submitContact(contact: Omit<Contact, 'id' | 'created_at' | 'status'>): Promise<Contact | null> {
+export async function submitContact(
+  contact: Omit<Contact, 'id' | 'created_at' | 'status'>,
+): Promise<Contact | null> {
   if (!isSupabaseConfigured) {
     console.error('Supabase is not configured. Contact submission was skipped.');
     return null;
