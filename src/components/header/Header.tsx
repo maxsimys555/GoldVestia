@@ -42,7 +42,7 @@ export function Header() {
           />
 
           <span className="text-lg font-bold text-white sm:text-xl whitespace-nowrap">
-            GoldInvest
+            GoldVestia
           </span>
         </Link>
 

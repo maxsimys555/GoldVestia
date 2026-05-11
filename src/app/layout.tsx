@@ -5,7 +5,7 @@ import { Footer } from '@/components/Footer';
 import { Header } from '@/components/header/Header';
 
 export const metadata: Metadata = {
-  title: 'GoldInvest | Premium Precious Metals Strategies',
+  title: 'GoldVestia | Premium Precious Metals Strategies',
   description:
     'Secure asset storage and premium precious metals investment insights for modern wealth preservation.',
   icons: {
