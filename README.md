@@ -1,36 +1,181 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GoldVestia
+
+Premium frontend investment website for gold, precious metals, market insights, and long-term wealth preservation.
+
+The project is built with Next.js App Router, TypeScript, Tailwind CSS, Framer Motion, Supabase, and Resend.
+
+## Tech Stack
+
+- Next.js 16 App Router
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion / Motion
+- Supabase
+- Resend
+- ESLint
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create a local environment file:
+
+```bash
+cp .env.example .env.local
+```
+
+Fill in the required values in `.env.local`.
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```txt
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables
 
-## Learn More
+The repository intentionally does not include `.env.local`.
 
-To learn more about Next.js, take a look at the following resources:
+Use `.env.example` as the safe template.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Required for Supabase data
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```env
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+```
 
-## Deploy on Vercel
+These values are public client values. They are safe to expose when Supabase Row Level Security policies are configured correctly.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Required for correct metadata
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```env
+NEXT_PUBLIC_SITE_URL=
+```
+
+Example:
+
+```env
+NEXT_PUBLIC_SITE_URL=https://goldvestia.com
+```
+
+### Optional email notifications
+
+```env
+RESEND_API_KEY=
+RESEND_FROM_EMAIL=
+CONTACT_NOTIFICATION_EMAIL=
+SITE_OWNER_EMAIL=
+```
+
+`RESEND_API_KEY` is private and must never be committed to Git.
+
+If Resend is not configured, the site still builds and runs, but contact email notifications are skipped.
+
+### Not currently required
+
+```env
+COINGECKO_API_KEY=
+```
+
+The current codebase does not read `COINGECKO_API_KEY`.
+
+## Supabase Tables
+
+The site can run with fallback content, but live dynamic content expects these Supabase tables:
+
+- `articles`
+- `metal_prices`
+- `investment_plans`
+- `testimonials`
+- `contacts`
+- `newsletter_subscribers`
+
+If Supabase is not configured, the frontend uses local fallback content where available.
+
+## Scripts
+
+```bash
+npm run dev
+```
+
+Starts the local development server.
+
+```bash
+npm run lint
+```
+
+Runs ESLint.
+
+```bash
+npm run build
+```
+
+Creates a production build.
+
+```bash
+npm run start
+```
+
+Starts the production server after build.
+
+## Deployment Notes
+
+For Vercel or Netlify:
+
+1. Add all required environment variables in the hosting dashboard.
+2. Do not upload `.env.local`.
+3. Run the default build command:
+
+```bash
+npm run build
+```
+
+4. Make sure Supabase RLS policies are configured before using production data.
+
+## Security Notes
+
+- `.env.local` is ignored by Git.
+- `.env.example` is safe to commit because it contains no secrets.
+- Do not commit service role keys, private API tokens, or Resend API keys.
+- `NEXT_PUBLIC_*` variables are exposed to the browser by design.
+
+## Project Structure
+
+```txt
+src/
+  app/
+  components/
+  lib/
+  services/
+public/
+```
+
+Main homepage entry:
+
+```txt
+src/app/page.tsx
+```
+
+Main layout:
+
+```txt
+src/app/layout.tsx
+```
+
+Header:
+
+```txt
+src/components/header/Header.tsx
+```
