@@ -42,13 +42,13 @@ export function HeroSection() {
 
         {/* TITLE */}
         <div className="max-w-4xl space-y-5 sm:space-y-6">
-          <h1 className="font-serif text-[38px] font-bold leading-[0.98] tracking-tight text-white min-[390px]:text-[41px] sm:text-6xl lg:text-[84px]">
-            Premium Insights
+          <h1 className="font-serif text-[34px] font-bold leading-[1.02] tracking-tight text-white min-[390px]:text-[37px] sm:text-6xl sm:leading-[0.96] lg:text-[84px]">
+            <span className="whitespace-nowrap">Premium Insights</span>
             <br />
-            for Precious
+            <span className="whitespace-nowrap">for Precious</span>
             <br className="sm:hidden" />
             <span className="hidden sm:inline"> </span>
-            <span className="bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-400 bg-clip-text text-transparent">
+            <span className="whitespace-nowrap bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-400 bg-clip-text text-transparent">
               Metals
             </span>
           </h1>
