@@ -6,6 +6,9 @@ import { Advantages } from '@/components/sections/Advantages';
 import { MarketInsights } from '@/components/sections/MarketInsights';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { AnimatedGoldBackground } from '@/components/ui/animated-gold-background';
+import { InstitutionalIntelligence } from '@/components/sections/InstitutionalIntelligence';
+import { ResearchAuthority } from '@/components/sections/ResearchAuthority';
+import { PremiumReportCta } from '@/components/sections/PremiumReportCta';
 
 export const unstable_instant = { prefetch: 'static' };
 
@@ -23,8 +26,11 @@ export default function Home() {
         </section>
 
         <MetalsShowcase />
+        <InstitutionalIntelligence />
         <Advantages />
         <MarketInsights />
+        <ResearchAuthority />
+        <PremiumReportCta />
         <Testimonials />
         <FeaturedArticlesSection />
         <BlogContentSections />

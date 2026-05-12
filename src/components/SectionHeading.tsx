@@ -15,11 +15,11 @@ export function SectionHeading({ pre, title, description, className }: SectionHe
           {pre}
         </p>
       ) : null}
-      <h2 className="mt-4 text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
+      <h2 className="mt-5 font-serif text-3xl font-semibold leading-[1.08] text-white sm:text-5xl lg:text-6xl">
         {title}
       </h2>
       {description ? (
-        <p className="mt-4 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
+        <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg sm:leading-9">
           {description}
         </p>
       ) : null}

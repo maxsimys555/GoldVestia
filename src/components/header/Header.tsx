@@ -23,6 +23,15 @@ export function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleLogoClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    setIsOpen(false);
+
+    if (pathname !== '/') return;
+
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/80 font-sans backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-[1224px] items-center justify-between px-5 sm:px-8 lg:h-[86px] lg:px-10">
@@ -30,7 +39,7 @@ export function Header() {
         <Link
           href="/"
           prefetch
-          onClick={() => setIsOpen(false)}
+          onClick={handleLogoClick}
           className="flex items-center gap-3 shrink-0"
         >
           <Image
