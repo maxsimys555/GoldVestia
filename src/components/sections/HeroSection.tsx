@@ -44,12 +44,14 @@ export function HeroSection() {
         <div className="max-w-4xl space-y-5 sm:space-y-6">
           <h1 className="font-serif text-[34px] font-bold leading-[1.02] tracking-tight text-white min-[390px]:text-[37px] sm:text-6xl sm:leading-[1.05] lg:text-[84px]">
             <span className="whitespace-nowrap">Premium Insights</span>
-            <br />
-            <span className="whitespace-nowrap">for Precious</span>
+            <span className="hidden sm:inline"> for </span>
             <br className="sm:hidden" />
-            <span className="hidden sm:inline"> </span>
-            <span className="whitespace-nowrap bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-400 bg-clip-text text-transparent">
-              Metals
+            <span className="whitespace-nowrap sm:hidden">for </span>
+            <span className="bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-400 bg-clip-text text-transparent">
+              <span className="whitespace-nowrap">Gold & </span>
+              <br className="sm:hidden" />
+              <span className="hidden sm:inline"></span>
+              <span className="whitespace-nowrap">Precious Metals</span>
             </span>
           </h1>
 
