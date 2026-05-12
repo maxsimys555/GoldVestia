@@ -23,6 +23,28 @@ const platinumPoints = [
   },
 ];
 
+const platinumFramework = [
+  {
+    label: 'Scarcity premium',
+    copy: 'Platinum supply is more concentrated and operationally complex than many investors realize, which can make patient positioning meaningful when demand improves.',
+  },
+  {
+    label: 'Industrial depth',
+    copy: 'The metal remains relevant across automotive catalysts, chemical processing, hydrogen technologies, and specialist manufacturing where reliability matters.',
+  },
+  {
+    label: 'Portfolio distinction',
+    copy: 'Platinum can add a refined layer of scarcity and industrial exposure without replacing the stability role typically held by gold.',
+  },
+];
+
+const platinumUseCases = [
+  'Investors seeking a rare-metal allocation beyond gold and silver.',
+  'Portfolios that can tolerate a more specialist supply-demand profile.',
+  'Long-term exposure to clean technology, manufacturing, and luxury demand.',
+  'Private holdings where secure custody and audit-ready reporting are priorities.',
+];
+
 export default function PlatinumPage() {
   return (
     <div className="relative overflow-hidden bg-[#070707] text-white">
@@ -111,6 +133,72 @@ export default function PlatinumPage() {
                 <p className="mt-5 text-lg leading-8 text-slate-300">{item.copy}</p>
               </article>
             ))}
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="border-t border-white/10 bg-[#050505] px-6 py-24 sm:px-8 lg:px-10">
+        <Reveal className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+          <div className="lg:sticky lg:top-28">
+            <SectionHeading
+              pre="Platinum thesis"
+              title="Rarity with a technical demand profile"
+              description="Platinum is most compelling when investors understand both sides of the metal: prestige and practical industrial necessity."
+            />
+            <p className="mt-8 text-lg leading-8 text-slate-300">
+              This is not a generic reserve holding. Platinum rewards research, patience, and a
+              willingness to hold a more specialized position inside a broader metals strategy.
+            </p>
+          </div>
+
+          <div className="grid gap-5">
+            {platinumFramework.map((item) => (
+              <article key={item.label} className="border border-white/10 bg-white/[0.03] p-7">
+                <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">
+                  {item.label}
+                </p>
+                <p className="mt-5 text-lg leading-8 text-slate-300">{item.copy}</p>
+              </article>
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="border-t border-white/10 px-6 py-24 sm:px-8 lg:px-10">
+        <Reveal className="mx-auto max-w-7xl">
+          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <SectionHeading
+                pre="Investor fit"
+                title="A specialist holding for sophisticated portfolios"
+                description="Platinum can be a powerful portfolio accent when the allocation is sized carefully and reviewed through supply-demand fundamentals."
+              />
+              <div className="mt-8 space-y-6 text-lg leading-8 text-slate-300">
+                <p>
+                  We help investors frame platinum as a strategic satellite: rare enough to matter,
+                  liquid enough to access through professional channels, and differentiated enough
+                  to bring a distinct profile to private metals exposure.
+                </p>
+                <p>
+                  The allocation can be paired with custody standards that keep ownership records
+                  clear, reporting orderly, and long-term control intact.
+                </p>
+              </div>
+            </div>
+
+            <div className="border border-white/10 bg-zinc-950/80 p-8">
+              <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">
+                Best suited for
+              </p>
+              <ul className="mt-7 space-y-4 text-base leading-7 text-slate-300">
+                {platinumUseCases.map((item) => (
+                  <li key={item} className="flex gap-4">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-amber-200" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </Reveal>
       </section>

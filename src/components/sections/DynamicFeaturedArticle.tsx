@@ -13,7 +13,7 @@ export function DynamicFeaturedArticle() {
 
   useEffect(() => {
     // If we already have data, don't refetch
-    if (categoryData.articles.length > 0) {
+    if (categoryData.loading || categoryData.articles.length > 0) {
       return;
     }
 
@@ -33,7 +33,15 @@ export function DynamicFeaturedArticle() {
     };
 
     loadData();
-  }, [selectedCategory, categoryData.articles.length, setData, setFeatured, setLoading, setError]);
+  }, [
+    selectedCategory,
+    categoryData.articles.length,
+    categoryData.loading,
+    setData,
+    setFeatured,
+    setLoading,
+    setError,
+  ]);
 
   const featured = categoryData.featured || categoryData.articles[0];
 

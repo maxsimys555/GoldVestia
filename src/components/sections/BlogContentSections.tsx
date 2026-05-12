@@ -1,10 +1,11 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { ArrowUpRight, Check } from 'lucide-react';
 import { useState } from 'react';
 
-const FALLBACK_LOGO = '/icon.svg';
+const FALLBACK_LOGO = '/logo.svg';
 
 const posts = [
   {
@@ -143,9 +144,12 @@ export function BlogContentSections() {
               Join investors following the forces shaping global precious metals markets and
               economic uncertainty.
             </p>
-            <button className="mt-8 h-14 w-full rounded bg-[#f3c96f] font-sans text-base font-bold text-black transition hover:bg-[#ffd982] sm:mt-12 sm:text-lg">
+            <Link
+              href="/contact"
+              className="mt-8 flex h-14 w-full items-center justify-center rounded bg-[#f3c96f] font-sans text-base font-bold text-black transition hover:bg-[#ffd982] sm:mt-12 sm:text-lg"
+            >
               Subscribe now!
-            </button>
+            </Link>
 
             <div className="mt-10 sm:mt-16">
               <h3 className="text-2xl font-bold sm:text-3xl">What&apos;s included:</h3>

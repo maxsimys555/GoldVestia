@@ -23,6 +23,28 @@ const goldDetails = [
   },
 ];
 
+const goldFramework = [
+  {
+    label: 'Reserve core',
+    copy: 'Gold is best positioned as the stable center of a precious metals strategy: highly recognized, deeply liquid, and historically resilient during periods of currency stress.',
+  },
+  {
+    label: 'Custody discipline',
+    copy: 'Allocated storage, insured vaulting, and clear ownership records help transform a gold position from an idea into a practical reserve asset.',
+  },
+  {
+    label: 'Rebalancing rhythm',
+    copy: 'Premium investors use gold to preserve optionality, then rebalance deliberately when market volatility creates valuation gaps across the broader portfolio.',
+  },
+];
+
+const goldUseCases = [
+  'Long-term family wealth preservation with a physical reserve layer.',
+  'Portfolio protection during equity, credit, or currency instability.',
+  'A liquid asset base for investors who want discretion and global recognition.',
+  'Legacy planning where custody, documentation, and ownership continuity matter.',
+];
+
 export default function GoldPage() {
   return (
     <div className="relative overflow-hidden bg-[#070707] text-white">
@@ -110,6 +132,73 @@ export default function GoldPage() {
                 <p className="mt-5 text-lg leading-8 text-slate-300">{item.copy}</p>
               </article>
             ))}
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="border-t border-white/10 bg-[#050505] px-6 py-24 sm:px-8 lg:px-10">
+        <Reveal className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <div className="lg:sticky lg:top-28">
+            <SectionHeading
+              pre="Why gold"
+              title="A physical reserve for uncertain capital cycles"
+              description="Gold performs its strongest role when it is treated with patience, proper custody, and a clear place inside the wider portfolio."
+            />
+            <p className="mt-8 text-lg leading-8 text-slate-300">
+              For private investors, gold is less about chasing every price movement and more about
+              protecting decision-making freedom. It gives capital a durable reference point when
+              financial markets become noisy, correlated, or emotionally charged.
+            </p>
+          </div>
+
+          <div className="grid gap-5">
+            {goldFramework.map((item) => (
+              <article key={item.label} className="border border-white/10 bg-white/[0.03] p-7">
+                <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">
+                  {item.label}
+                </p>
+                <p className="mt-5 text-lg leading-8 text-slate-300">{item.copy}</p>
+              </article>
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="border-t border-white/10 px-6 py-24 sm:px-8 lg:px-10">
+        <Reveal className="mx-auto max-w-7xl">
+          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <SectionHeading
+                pre="Investor fit"
+                title="Designed for capital that values control"
+                description="A gold allocation is strongest when the objective is clear: reserve strength, liquidity, and calm through volatility."
+              />
+              <div className="mt-8 space-y-6 text-lg leading-8 text-slate-300">
+                <p>
+                  We help clients define how much gold belongs in the portfolio, how it should be
+                  stored, and how it should be reviewed over time. The process is quiet, measured,
+                  and built for investors who prefer precision over spectacle.
+                </p>
+                <p>
+                  Each allocation can be shaped around custody preferences, reporting needs, and
+                  the level of liquidity required for future capital events.
+                </p>
+              </div>
+            </div>
+
+            <div className="border border-white/10 bg-zinc-950/80 p-8">
+              <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">
+                Common objectives
+              </p>
+              <ul className="mt-7 space-y-4 text-base leading-7 text-slate-300">
+                {goldUseCases.map((item) => (
+                  <li key={item} className="flex gap-4">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-amber-200" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </Reveal>
       </section>

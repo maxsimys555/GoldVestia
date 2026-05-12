@@ -34,11 +34,11 @@ export function Header() {
           className="flex items-center gap-3 shrink-0"
         >
           <Image
-            src="/icon.svg"
-            alt="GoldInvest"
-            width={28}
-            height={28}
-            className="h-7 w-7 shrink-0"
+            src="/logo.svg"
+            alt="GoldVestia"
+            width={56}
+            height={56}
+            className="h-12 w-12 shrink-0 sm:h-14 sm:w-14"
           />
 
           <span className="text-lg font-bold text-white sm:text-xl whitespace-nowrap">

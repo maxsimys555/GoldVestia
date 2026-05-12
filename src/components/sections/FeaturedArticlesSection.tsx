@@ -14,7 +14,7 @@ const fallbackArticles = [
       'Why disciplined gold allocation continues to matter for families, institutions, and long-horizon capital.',
     category: 'Gold',
     image_url: '/images/gold-reserve.svg',
-    source: 'GoldInvest Research',
+    source: 'GoldVestia Research',
     date: '2026-05-08',
   },
   {
@@ -81,7 +81,7 @@ export async function FeaturedArticlesSection() {
               <article className="h-full overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-950/80 shadow-[0_40px_90px_-70px_rgba(0,0,0,0.8)] transition duration-300 hover:-translate-y-1 hover:border-amber-200/25 hover:bg-white/5">
                 <div className={index === 0 ? 'relative aspect-[1.18] bg-zinc-900 sm:aspect-[1.72]' : 'relative aspect-[1.28] bg-zinc-900 sm:aspect-[1.45]'}>
                   <Image
-                    src={article.image_url || '/icon.svg'}
+                    src={article.image_url || '/logo.svg'}
                     alt={article.title}
                     fill
                     unoptimized

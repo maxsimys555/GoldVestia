@@ -5,11 +5,14 @@ import { Footer } from '@/components/Footer';
 import { Header } from '@/components/header/Header';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://goldvestia.com'),
   title: 'GoldVestia | Premium Precious Metals Strategies',
   description:
     'Secure asset storage and premium precious metals investment insights for modern wealth preservation.',
   icons: {
-    icon: '/icon.svg',
+    icon: '/logo.svg',
+    shortcut: '/logo.svg',
+    apple: '/logo.svg',
   },
 };
 

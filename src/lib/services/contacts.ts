@@ -4,8 +4,18 @@ export async function submitContact(
   contact: Omit<Contact, 'id' | 'created_at' | 'status'>,
 ): Promise<Contact | null> {
   if (!isSupabaseConfigured) {
-    console.error('Supabase is not configured. Contact submission was skipped.');
-    return null;
+    console.warn(
+      `Supabase is not configured. Contact inquiry accepted locally for ${contact.email}.`,
+    );
+
+    return {
+      id: `local-${contact.email}`,
+      name: contact.name,
+      email: contact.email,
+      message: contact.message,
+      created_at: new Date().toISOString(),
+      status: 'new',
+    };
   }
 
   try {

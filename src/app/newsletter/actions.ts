@@ -28,7 +28,7 @@ export async function subscribeNewsletterAction(
   if (result.status === 'duplicate') {
     return {
       status: 'success',
-      message: 'You are already subscribed to GoldInvest intelligence.',
+      message: 'You are already subscribed to GoldVestia intelligence.',
     };
   }
 
@@ -41,6 +41,6 @@ export async function subscribeNewsletterAction(
 
   return {
     status: 'success',
-    message: 'Subscription confirmed. Watch your inbox for private metals intelligence.',
+    message: 'Subscription confirmed. Private metals intelligence is now reserved for your inbox.',
   };
 }

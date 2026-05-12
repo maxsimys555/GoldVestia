@@ -23,6 +23,28 @@ const silverPoints = [
   },
 ];
 
+const silverFramework = [
+  {
+    label: 'Industrial demand',
+    copy: 'Silver remains essential to electronics, energy systems, medical tools, and precision manufacturing, giving the metal a growth-sensitive demand profile.',
+  },
+  {
+    label: 'Monetary memory',
+    copy: 'Its precious metal character allows silver to participate in defensive flows while still responding to expansion in real-world industrial usage.',
+  },
+  {
+    label: 'Volatility control',
+    copy: 'Silver can move quickly, so premium allocation requires thoughtful sizing, liquidity planning, and a disciplined rebalancing cadence.',
+  },
+];
+
+const silverUseCases = [
+  'A satellite allocation beside a stronger gold reserve core.',
+  'Exposure to electrification, solar, advanced electronics, and manufacturing demand.',
+  'A more tactical precious metals sleeve with high liquidity potential.',
+  'Portfolio diversification for investors comfortable with a more active price profile.',
+];
+
 export default function SilverPage() {
   return (
     <div className="relative overflow-hidden bg-[#070707] text-white">
@@ -109,6 +131,73 @@ export default function SilverPage() {
                 <p className="mt-5 text-lg leading-8 text-slate-300">{item.copy}</p>
               </article>
             ))}
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="border-t border-white/10 bg-[#050505] px-6 py-24 sm:px-8 lg:px-10">
+        <Reveal className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+          <div className="lg:sticky lg:top-28">
+            <SectionHeading
+              pre="Silver thesis"
+              title="Where monetary metal meets modern industry"
+              description="Silver is useful because it carries two identities at once: a precious metal reserve and a material embedded in the future economy."
+            />
+            <p className="mt-8 text-lg leading-8 text-slate-300">
+              That dual profile gives silver a different rhythm than gold. It can strengthen a
+              metals portfolio, but it deserves a more tactical framework, especially for investors
+              balancing wealth preservation with industrial growth exposure.
+            </p>
+          </div>
+
+          <div className="grid gap-5">
+            {silverFramework.map((item) => (
+              <article key={item.label} className="border border-white/10 bg-white/[0.03] p-7">
+                <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">
+                  {item.label}
+                </p>
+                <p className="mt-5 text-lg leading-8 text-slate-300">{item.copy}</p>
+              </article>
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="border-t border-white/10 px-6 py-24 sm:px-8 lg:px-10">
+        <Reveal className="mx-auto max-w-7xl">
+          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <SectionHeading
+                pre="Investor fit"
+                title="A precise complement for diversified metals exposure"
+                description="Silver is most effective when the allocation has a clear purpose and a known tolerance for movement."
+              />
+              <div className="mt-8 space-y-6 text-lg leading-8 text-slate-300">
+                <p>
+                  We position silver as a flexible allocation that can sit beside gold, not replace
+                  it. The objective is to add industrial participation while keeping custody,
+                  settlement, and reporting as refined as the rest of the metals portfolio.
+                </p>
+                <p>
+                  Clients can use silver to create tactical depth, diversify entry points, and
+                  maintain liquidity across changing market environments.
+                </p>
+              </div>
+            </div>
+
+            <div className="border border-white/10 bg-zinc-950/80 p-8">
+              <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">
+                Best suited for
+              </p>
+              <ul className="mt-7 space-y-4 text-base leading-7 text-slate-300">
+                {silverUseCases.map((item) => (
+                  <li key={item} className="flex gap-4">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-amber-200" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </Reveal>
       </section>

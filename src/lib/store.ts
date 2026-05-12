@@ -113,15 +113,21 @@ export const useDashboardStore = create<DashboardStore>((set, get) => ({
     })),
 
   setLoading: (category: Category, loading: boolean) =>
-    set((state) => ({
-      data: {
-        ...state.data,
-        [category]: {
-          ...state.data[category],
-          loading,
+    set((state) => {
+      if (state.data[category].loading === loading) {
+        return state;
+      }
+
+      return {
+        data: {
+          ...state.data,
+          [category]: {
+            ...state.data[category],
+            loading,
+          },
         },
-      },
-    })),
+      };
+    }),
 
   setError: (category: Category, error: string | null) =>
     set((state) => ({

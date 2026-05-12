@@ -7,7 +7,7 @@ type EmailResult = {
 
 const resendApiKey = process.env.RESEND_API_KEY;
 const ownerEmail = process.env.CONTACT_NOTIFICATION_EMAIL || process.env.SITE_OWNER_EMAIL;
-const fromEmail = process.env.RESEND_FROM_EMAIL || 'GoldInvest <onboarding@resend.dev>';
+const fromEmail = process.env.RESEND_FROM_EMAIL || 'GoldVestia <onboarding@resend.dev>';
 
 async function getResendClient() {
   if (!resendApiKey) {
@@ -37,7 +37,7 @@ export async function sendContactNotification(input: ContactFormInput): Promise<
       subject: `New private metals inquiry from ${input.name}`,
       replyTo: input.email,
       text: [
-        'New GoldInvest contact inquiry',
+        'New GoldVestia contact inquiry',
         '',
         `Name: ${input.name}`,
         `Email: ${input.email}`,
@@ -69,13 +69,13 @@ export async function sendContactAutoReply(input: ContactFormInput): Promise<Ema
     const { error } = await resend.emails.send({
       from: fromEmail,
       to: input.email,
-      subject: 'Your GoldInvest inquiry was received',
+      subject: 'Your GoldVestia inquiry was received',
       text: [
         `Hello ${input.name},`,
         '',
-        'Thank you for contacting GoldInvest. Our private metals desk has received your inquiry and will respond shortly.',
+        'Thank you for contacting GoldVestia. Our private metals desk has received your inquiry and will respond shortly.',
         '',
-        'GoldInvest',
+        'GoldVestia',
       ].join('\n'),
     });
 

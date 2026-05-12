@@ -7,12 +7,11 @@ import { fetchNewsForCategoryWithCache } from '@/lib/api';
 export function useDashboardInitialize() {
   const { selectedCategory, data, setData, setFeatured, setLoading, setError } =
     useDashboardStore();
+  const categoryData = data[selectedCategory];
 
   useEffect(() => {
-    const categoryData = data[selectedCategory];
-
     // Check if we already have data for this category
-    if (categoryData.articles.length > 0) {
+    if (categoryData.loading || categoryData.articles.length > 0) {
       return;
     }
 
@@ -36,5 +35,13 @@ export function useDashboardInitialize() {
     };
 
     initializeCategory();
-  }, [selectedCategory, data, setData, setFeatured, setLoading, setError]);
+  }, [
+    selectedCategory,
+    categoryData.articles.length,
+    categoryData.loading,
+    setData,
+    setFeatured,
+    setLoading,
+    setError,
+  ]);
 }

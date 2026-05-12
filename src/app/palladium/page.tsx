@@ -21,6 +21,28 @@ const palladiumAdvantages = [
   },
 ];
 
+const palladiumFramework = [
+  {
+    label: 'Concentrated supply',
+    copy: 'Palladium production is tied to a limited set of mining regions and byproduct streams, making supply dynamics unusually important to the investment case.',
+  },
+  {
+    label: 'Demand transition',
+    copy: 'Automotive catalysts, recycling flows, substitution, and policy shifts all influence palladium, so the strongest strategy is selective and closely reviewed.',
+  },
+  {
+    label: 'Asymmetric profile',
+    copy: 'Because palladium can be volatile, it works best as a high-conviction satellite allocation rather than a broad reserve replacement.',
+  },
+];
+
+const palladiumUseCases = [
+  'Experienced investors seeking a rare and tactical metals position.',
+  'Portfolios built to include carefully sized satellite allocations.',
+  'Clients who want exposure to supply-constrained precious metal markets.',
+  'Private holdings supported by secure custody, documentation, and review.',
+];
+
 export default function PalladiumPage() {
   return (
     <div className="relative overflow-hidden bg-[#070707] text-white">
@@ -109,6 +131,72 @@ export default function PalladiumPage() {
                 <p className="mt-5 text-lg leading-8 text-slate-300">{item.copy}</p>
               </article>
             ))}
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="border-t border-white/10 bg-[#050505] px-6 py-24 sm:px-8 lg:px-10">
+        <Reveal className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+          <div className="lg:sticky lg:top-28">
+            <SectionHeading
+              pre="Palladium thesis"
+              title="A rare metal shaped by supply tension"
+              description="Palladium can add distinction to a metals portfolio, but it deserves discipline, sizing control, and regular review."
+            />
+            <p className="mt-8 text-lg leading-8 text-slate-300">
+              The opportunity is not simply that palladium is rare. The opportunity is the
+              relationship between concentrated production, industrial need, recycling flows, and
+              shifting demand patterns.
+            </p>
+          </div>
+
+          <div className="grid gap-5">
+            {palladiumFramework.map((item) => (
+              <article key={item.label} className="border border-white/10 bg-white/[0.03] p-7">
+                <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">
+                  {item.label}
+                </p>
+                <p className="mt-5 text-lg leading-8 text-slate-300">{item.copy}</p>
+              </article>
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
+      <section className="border-t border-white/10 px-6 py-24 sm:px-8 lg:px-10">
+        <Reveal className="mx-auto max-w-7xl">
+          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <SectionHeading
+                pre="Investor fit"
+                title="A high-conviction satellite for private portfolios"
+                description="Palladium belongs in portfolios where the investor understands scarcity, volatility, and the importance of deliberate exposure."
+              />
+              <div className="mt-8 space-y-6 text-lg leading-8 text-slate-300">
+                <p>
+                  We frame palladium as a selective position for investors who already understand
+                  the stabilizing role of gold and want a more specialized layer of metal exposure.
+                </p>
+                <p>
+                  The allocation can be reviewed against supply data, industrial demand signals,
+                  liquidity conditions, and custody preferences so it remains intentional over time.
+                </p>
+              </div>
+            </div>
+
+            <div className="border border-white/10 bg-zinc-950/80 p-8">
+              <p className="text-sm uppercase tracking-[0.35em] text-amber-200/80">
+                Best suited for
+              </p>
+              <ul className="mt-7 space-y-4 text-base leading-7 text-slate-300">
+                {palladiumUseCases.map((item) => (
+                  <li key={item} className="flex gap-4">
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-amber-200" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </Reveal>
       </section>
