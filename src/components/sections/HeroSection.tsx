@@ -23,7 +23,7 @@ const stats = [
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden px-5 pb-20 pt-28 sm:px-8 sm:pb-24 sm:pt-32 lg:px-10 lg:pb-28 lg:pt-36">
+    <section className="relative overflow-hidden px-5 pb-16 pt-16 sm:px-8 sm:pb-24 sm:pt-32 lg:px-10 lg:pb-28 lg:pt-36">
       {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute left-1/2 top-0 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-amber-200/10 blur-3xl" />
@@ -33,7 +33,7 @@ export function HeroSection() {
 
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center text-center">
         {/* TOP BADGE */}
-        <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-md">
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-md sm:mb-7">
           <span className="h-2 w-2 rounded-full bg-amber-300" />
           <span className="text-sm font-medium text-slate-200">
             Trusted by 15,000+ investors worldwide
@@ -41,24 +41,26 @@ export function HeroSection() {
         </div>
 
         {/* TITLE */}
-        <div className="max-w-4xl space-y-6">
-          <h1 className="font-serif text-5xl font-bold leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-[84px]">
+        <div className="max-w-4xl space-y-5 sm:space-y-6">
+          <h1 className="font-serif text-[38px] font-bold leading-[0.98] tracking-tight text-white min-[390px]:text-[41px] sm:text-6xl lg:text-[84px]">
             Premium Insights
             <br />
-            for{' '}
+            for Precious
+            <br className="sm:hidden" />
+            <span className="hidden sm:inline"> </span>
             <span className="bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-400 bg-clip-text text-transparent">
-              Precious Metals
+              Metals
             </span>
           </h1>
 
-          <p className="mx-auto max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          <p className="mx-auto max-w-2xl text-[14px] leading-7 text-slate-300 sm:text-lg sm:leading-relaxed">
             Institutional-grade research, macroeconomic analysis, and real-time intelligence for
             gold, silver, platinum, and global commodity markets.
           </p>
         </div>
 
         {/* CTA */}
-        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
+        <div className="mt-8 flex flex-col items-center gap-4 sm:mt-10 sm:flex-row">
           <Link
             href="/market-insights"
             prefetch

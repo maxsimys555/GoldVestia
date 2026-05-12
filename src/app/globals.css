@@ -157,6 +157,49 @@
   .text-gold {
     color: rgb(250, 214, 165);
   }
+
+  .safari-paint-safe {
+    isolation: isolate;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .safari-paint-layer {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .safari-paint-safe {
+    display: block;
+    min-height: 1px;
+    overflow: visible;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+
+  .safari-paint-safe,
+  .safari-paint-safe * {
+    opacity: 1;
+    visibility: visible;
+    filter: none;
+    -webkit-filter: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .safari-paint-layer {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform;
+  }
 }
 
 @keyframes news-marquee {
