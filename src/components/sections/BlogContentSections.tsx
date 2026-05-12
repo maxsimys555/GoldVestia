@@ -103,7 +103,7 @@ function ImageCard({
 export function BlogContentSections() {
   return (
     <>
-      <section className="bg-black px-5 py-20 text-white sm:px-8 sm:py-24 lg:px-10 lg:py-28">
+      <section className="bg-black/50 px-5 py-20 text-white backdrop-blur-[1px] sm:px-8 sm:py-24 lg:px-10 lg:py-28">
         <div className="mx-auto max-w-[1280px]">
           <div className="mb-10 flex flex-col gap-5 sm:mb-14 sm:flex-row sm:items-end sm:justify-between lg:mb-16">
             <h2 className="text-3xl font-bold leading-tight sm:text-5xl lg:text-6xl">Featured Briefings</h2>
@@ -134,7 +134,7 @@ export function BlogContentSections() {
         </div>
       </section>
 
-      <section className="bg-[#050505] px-5 py-20 text-white sm:px-8 sm:py-24 lg:px-10 lg:py-28">
+      <section className="bg-[#050505]/55 px-5 py-20 text-white backdrop-blur-[1px] sm:px-8 sm:py-24 lg:px-10 lg:py-28">
         <div className="mx-auto grid max-w-[1280px] gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:gap-16">
           <div className="max-w-xl lg:sticky lg:top-28">
             <h2 className="text-3xl font-bold leading-tight sm:text-5xl lg:text-6xl">
@@ -198,7 +198,7 @@ export function BlogContentSections() {
         </div>
       </section>
 
-      <section id="recent-posts" className="bg-[#111111] px-5 py-20 text-white sm:px-8 sm:py-24 lg:px-10 lg:py-28">
+      <section id="recent-posts" className="bg-[#111111]/60 px-5 py-20 text-white backdrop-blur-[1px] sm:px-8 sm:py-24 lg:px-10 lg:py-28">
         <div className="mx-auto max-w-[1280px]">
           <div className="mb-10 flex flex-col gap-5 sm:mb-16 sm:flex-row sm:items-end sm:justify-between">
             <h2 className="text-3xl font-bold leading-tight sm:text-5xl lg:text-6xl">Recent Intelligence</h2>

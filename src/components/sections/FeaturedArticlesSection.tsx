@@ -54,7 +54,7 @@ export async function FeaturedArticlesSection() {
   const visibleArticles = (articles.length > 0 ? articles : fallbackArticles).slice(0, 6);
 
   return (
-    <section id="featured-articles" className="border-t border-white/10 bg-[#080808] px-5 py-20 text-white sm:px-8 sm:py-24 lg:px-10">
+    <section id="featured-articles" className="border-t border-white/10 bg-black/45 px-5 py-20 text-white backdrop-blur-[1px] sm:px-8 sm:py-24 lg:px-10">
       <Reveal className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading

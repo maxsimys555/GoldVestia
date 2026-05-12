@@ -75,7 +75,10 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
 
   const formattedDate = formatDate(article.date);
   const paragraphs = article.content.split('\n\n').filter(Boolean);
-  const keyTakeaways = paragraphs.slice(1, 4);
+  const keySignals = paragraphs.slice(1, 4).map((paragraph) => {
+    const [firstSentence] = paragraph.split('. ');
+    return firstSentence.endsWith('.') ? firstSentence : `${firstSentence}.`;
+  });
   const relatedArticles = articles
     .filter((relatedArticle) => relatedArticle.slug !== article.slug)
     .slice(0, 3);
@@ -134,34 +137,30 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
       </section>
 
       <section className="px-5 py-20 sm:px-8 sm:py-24 lg:px-10">
-        <Reveal className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[280px_minmax(0,760px)_1fr]">
-          <aside className="hidden lg:block">
-            <div className="sticky top-28 border-l border-amber-200/30 pl-6">
-              <p className="text-xs uppercase tracking-[0.28em] text-slate-500">Reading note</p>
-              <p className="mt-4 text-lg leading-8 text-slate-300">
-                {paragraphs[0]}
-              </p>
-            </div>
-          </aside>
-
+        <Reveal className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[minmax(0,760px)_320px] lg:items-start">
           <article className="space-y-7 text-lg leading-8 text-slate-300">
             {paragraphs.map((paragraph, index) => (
               <p
                 key={paragraph}
-                className={index === 0 ? 'text-xl leading-9 text-slate-100 lg:hidden' : undefined}
+                className={index === 0 ? 'text-xl leading-9 text-slate-100' : undefined}
               >
                 {paragraph}
               </p>
             ))}
           </article>
 
-          <aside className="lg:pt-2">
-            <div className="border border-white/10 bg-white/[0.03] p-6 backdrop-blur">
-              <p className="text-xs uppercase tracking-[0.28em] text-amber-200/80">Key signals</p>
-              <div className="mt-6 space-y-5">
-                {keyTakeaways.map((takeaway) => (
-                  <p key={takeaway} className="border-t border-white/10 pt-5 text-sm leading-7 text-slate-300">
-                    {takeaway}
+          <aside className="lg:sticky lg:top-28">
+            <div className="border border-white/10 bg-zinc-950/80 p-6 shadow-[0_40px_90px_-70px_rgba(0,0,0,0.8)]">
+              <p className="text-xs uppercase tracking-[0.28em] text-amber-200/80">
+                Key signals
+              </p>
+              <div className="mt-6 space-y-4">
+                {keySignals.map((signal) => (
+                  <p
+                    key={signal}
+                    className="border-t border-white/10 pt-4 text-sm leading-7 text-slate-300"
+                  >
+                    {signal}
                   </p>
                 ))}
               </div>
