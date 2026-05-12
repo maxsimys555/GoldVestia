@@ -19,8 +19,8 @@ export default function Home() {
 
       <div className="relative z-10">
         <section className="relative overflow-hidden">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,214,120,0.2),transparent_24%),radial-gradient(circle_at_80%_15%,_rgba(255,200,0,0.14),transparent_22%)]" />
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-black/18 to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,214,120,0.055),transparent_24%),radial-gradient(circle_at_80%_15%,_rgba(255,200,0,0.04),transparent_22%)]" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-black/38 to-transparent" />
 
           <HeroSection />
         </section>
